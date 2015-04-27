@@ -1,0 +1,12 @@
+{
+  "name": "html2bl",
+  "version": "0.0.1",
+  "description": "Return block directories list from html file, based on filestructure",
+  "author": "Dima Belitsky",
+  "dependencies": {},
+  "devDependencies": {
+    "htmlparser2": "^3.8.2",
+    "vow": "^0.4.9",
+    "vow-node": "^0.3.0"
+  }
+}

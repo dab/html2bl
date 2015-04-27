@@ -3,7 +3,6 @@ var htmlparser = require("htmlparser2"),
     path = require("path"),
     vow = require('vow'),
     promisify = require('vow-node').promisify,
-    //htmlSource = process.argv[2] ? path.resolve(process.argv[2]) : 'index.html',
     classes = [],
     stat = promisify(fs.stat);
 
@@ -57,8 +56,8 @@ function getFilesFromBlocks(blocks, levels) {
 }
 
 /**
- * Возвращает объект со списком css файлов.
- * Имена файлов извлекаются из классов DOM-узлов html файла, который передается как params.index
+ * Returns promise with block directories from html file.
+ * Looking on current file tree with redifinition levels.
  * @param {Object} params
  * @param {string} params.index html file name for parsing
  * @param {(string|string[])} params.levels — redefinition levels
