@@ -59,12 +59,12 @@ function getFilesFromBlocks(blocks, levels) {
  * Returns promise with block directories from html file.
  * Looking on current file tree with redifinition levels.
  * @param {Object} params
- * @param {string} params.index html file name for parsing
+ * @param {string} params.htmlSrc html file name for parsing
  * @param {(string|string[])} params.levels — redefinition levels
  *
- **/
-exports.files = function(params) {
-    var htmlSrc = fs.readFileSync(params.index, 'utf8'),
+ */
+exports.getFileNames = function(params) {
+    var htmlSrc = fs.readFileSync(params.htmlSrc, 'utf8'),
         blocks = getClasses(htmlSrc);
 
     return getFilesFromBlocks(blocks, params.levels).then(function(files) {
